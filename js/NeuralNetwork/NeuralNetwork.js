@@ -60,7 +60,7 @@ class NeuralNetwork
 		var inputLayer = true;
 		for (var i=0; i < numHiddenLayers + 1; ++i)
 		{
-			var neuronLayer = neuronLayers[i];
+			var neuronLayer = this.neuronLayers[i];
 			
 			if (!inputLayer)
 			{
