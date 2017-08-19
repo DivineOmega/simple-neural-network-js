@@ -89,17 +89,17 @@ class NeuralNetwork
 				{
 					// Multiply it with the input.
 					totalInput += neuron.weights[k] * 
-							inputs.get(cWeight);
+							inputs[cWeight];
 					
 					cWeight++;
 				}
 				
 				// Add in the bias (final weight)
-				totalInput += neuron.weights[neuron.weights.size()-1] * bias;
+				totalInput += neuron.weights[neuron.weights.length-1] * this.bias;
 				
 				// We can store the outputs from each layer as we generate them.
 			    // The combined activation is first filtered through the sigmoid function
-				outputs.push(this.sigmoid(totalInput, activationResponse));
+				outputs.push(this.sigmoid(totalInput, this.activationResponse));
 				
 				cWeight = 0;
 			}
