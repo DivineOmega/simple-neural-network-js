@@ -33,13 +33,13 @@ class NeuralNetwork
 	
 		    //create output layer
 		    var outputLayer = new NeuronLayer(this.numOutputs, this.numNeuronsPerHiddenLayer);
-			neuronLayers.push(outputLayer);
+			this.neuronLayers.push(outputLayer);
 		}
 		else
 		{
 			//create output layer
 			var outputLayer = new NeuronLayer(this.numOutputs, this.numInputs);
-			neuronLayers.push(outputLayer);
+			this.neuronLayers.push(outputLayer);
 		}
 	}
 	
