@@ -25,7 +25,7 @@ class NeuralNetwork
 			var firstHiddenLayer = new NeuronLayer(this.numNeuronsPerHiddenLayer, this.numInputs);
 			this.neuronLayers.push(firstHiddenLayer);
 	    
-		    for (var i=0; i<numHiddenLayers-1; ++i)
+		    for (var i=0; i<this.numHiddenLayers-1; ++i)
 		    {
 		    	var newHiddenLayer = new NeuronLayer(this.numNeuronsPerHiddenLayer, this.numNeuronsPerHiddenLayer);
 				this.neuronLayers.push(newHiddenLayer);
@@ -58,14 +58,14 @@ class NeuralNetwork
 		
 		// Loop through all layers
 		var inputLayer = true;
-		for (var i=0; i < numHiddenLayers + 1; ++i)
+		for (var i=0; i < this.numHiddenLayers + 1; ++i)
 		{
 			var neuronLayer = this.neuronLayers[i];
 			
 			if (!inputLayer)
 			{
 				inputs = [];
-				inputs.concat(outputs);
+				inputs = inputs.concat(outputs);
 			}
 			else
 			{
