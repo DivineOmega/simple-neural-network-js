@@ -9,7 +9,7 @@ class Neuron
 		{
 			var newWeight = -1 + (Math.random*2);
 			
-			weights.push(newWeight);
+			this.weights.push(newWeight);
 		}
 	}
 }
