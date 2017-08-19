@@ -12,7 +12,7 @@ class NeuralNetwork
         this.activationResponse = 1.0;
         this.neuronLayers = [];
 
-        createNetwork();
+        this.createNetwork();
     }
 		
     createNetwork()	
@@ -22,23 +22,23 @@ class NeuralNetwork
 		if (this.numHiddenLayers > 0)
 		{
 			//create first hidden layer
-			var firstHiddenLayer = new NeuronLayer(numNeuronsPerHiddenLayer, numInputs);
+			var firstHiddenLayer = new NeuronLayer(this.numNeuronsPerHiddenLayer, this.numInputs);
 			this.neuronLayers.push(firstHiddenLayer);
 	    
 		    for (var i=0; i<numHiddenLayers-1; ++i)
 		    {
-		    	var newHiddenLayer = new NeuronLayer(numNeuronsPerHiddenLayer, numNeuronsPerHiddenLayer);
+		    	var newHiddenLayer = new NeuronLayer(this.numNeuronsPerHiddenLayer, this.numNeuronsPerHiddenLayer);
 				this.neuronLayers.push(newHiddenLayer);
 		    }
 	
 		    //create output layer
-		    var outputLayer = new NeuronLayer(numOutputs, numNeuronsPerHiddenLayer);
+		    var outputLayer = new NeuronLayer(this.numOutputs, this.numNeuronsPerHiddenLayer);
 			neuronLayers.push(outputLayer);
 		}
 		else
 		{
 			//create output layer
-			var outputLayer = new NeuronLayer(numOutputs, numInputs);
+			var outputLayer = new NeuronLayer(this.numOutputs, this.numInputs);
 			neuronLayers.push(outputLayer);
 		}
 	}
