@@ -57,7 +57,7 @@ var weights = neuralNetwork.getWeights();
 
 var newWeights = [];
 for (var i=0; i < weights.length; i++) {
-    newWeights.push(weights[i]) * 0.5; 
+    newWeights.push(weights[i] * 0.5); 
 }
 
 neuralNetwork.setWeights(newWeights);
