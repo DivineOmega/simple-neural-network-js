@@ -1,3 +1,5 @@
+import NeuronLayer from "./NeuronLayer";
+
 export default class NeuralNetwork
 {    
     constructor(numInputs, numOutputs, numHiddenLayers, numNeuronsPerHiddenLayer) 
