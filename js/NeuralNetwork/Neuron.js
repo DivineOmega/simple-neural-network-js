@@ -1,4 +1,4 @@
-class Neuron
+export default class Neuron
 {
 	constructor(numInputs)
 	{

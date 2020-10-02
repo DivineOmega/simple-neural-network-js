@@ -1,4 +1,4 @@
-class NeuralNetwork
+export default class NeuralNetwork
 {    
     constructor(numInputs, numOutputs, numHiddenLayers, numNeuronsPerHiddenLayer) 
     {

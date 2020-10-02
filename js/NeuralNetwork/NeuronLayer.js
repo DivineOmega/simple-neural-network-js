@@ -1,4 +1,4 @@
-class NeuronLayer
+export default class NeuronLayer
 {
 	constructor(numNeuronsPerHiddenLayer, numInputs)
 	{
